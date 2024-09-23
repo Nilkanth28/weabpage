@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="information.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="new-footer-logo.png" alt="EngTuwa Logo">
+            </a>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="information.html">Student Registration</a></li>
+                <li><a href="engineering.html">Engineering</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    <!-- Main Content -->
+    <div class="login-container">
+        <div class="form-wrapper">
+            <h2>Registration Form</h2>
+            <form action="#" method="POST" id="registrationForm" novalidate>
+                <!-- Grid Layout for Form -->
+                <div class="form-grid">
+                    <!-- Full Name -->
+                    <div class="input-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                        <span class="error-message" id="fullNameError"></span>
+                    </div>
+
+                    <!-- Father's Name -->
+                    <div class="input-group">
+                        <label for="fatherName">Father's Name</label>
+                        <input type="text" id="fatherName" name="fatherName" placeholder="Enter your father's name" required>
+                        <span class="error-message" id="fatherNameError"></span>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <!-- Phone Number -->
+                    <div class="input-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number" required pattern="[0-9]{10}">
+                        <span class="error-message" id="phoneNumberError"></span>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="input-group">
+                        <label for="address">Address</label>
+                        <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+                        <span class="error-message" id="addressError"></span>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="input-group">
+                        <label for="education">Education</label>
+                        <select id="education" name="education" required>
+                            <option value="">Select your education</option>
+                            <option value="High School">High School</option>
+                            <option value="Associate Degree">Associate Degree</option>
+                            <option value="Bachelor's Degree">Bachelor's Degree</option>
+                            <option value="Master's Degree">Master's Degree</option>
+                            <option value="Doctorate">Doctorate</option>
+                        </select>
+                        <span class="error-message" id="educationError"></span>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="8">
+                        <span class="error-message" id="passwordError"></span>
+                    </div>
+
+                    <!-- Confirm Password -->
+                    <div class="input-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required minlength="8">
+                        <span class="error-message" id="confirmPasswordError"></span>
+                    </div>
+                </div>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+
+         <!-- Toggle Button -->
+         <button id="toggleTableBtn">Show Registration Details</button>
+
+        <!-- JavaScript Variables Display Section -->
+        <div class="variables-display" id="variablesDisplay">
+            <h3 style="margin-bottom:2px;">Registration Details</h3>
+            <table id="variablesTable">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Father's Name</th>
+                        <th>Email</th>
+                        <th>Phone Number</th>
+                        <th>Address</th>
+                        <th>Education</th>
+                        <th>Password</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td id="varFullName"></td>
+                    <td id="varFatherName"></td>
+                    <td id="varEmail"></td>
+                    <td id="varPhoneNumber"></td>
+                    <td id="varAddress"></td>
+                    <td id="varEducation"></td>
+                    <td id="varPassword"></td>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Engineering College Tuwa. All rights reserved.</p>
+    </footer>
+
+    <script src="information.js"></script>
+</body>
+</html>
